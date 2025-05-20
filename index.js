@@ -1,7 +1,10 @@
 const express = require("express");
+const cors = require("cors");
 const posts = require("./posts.json");
 const app = express();
 const port = 5000;
+
+app.use(cors());
 
 app.get("/", (request, response) => {
   response.send("My Express server");
